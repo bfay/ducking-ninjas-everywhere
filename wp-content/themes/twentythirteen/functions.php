@@ -93,7 +93,7 @@ function twentythirteen_setup() {
 	 * "standard" posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 604, 270, true );
+	set_post_thumbnail_size( 604, 367, true );
 
 	// Register custom image size for image post formats.
 	add_image_size( 'twentythirteen-image-post', 724, 1288 );

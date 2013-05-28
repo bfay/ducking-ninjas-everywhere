@@ -10,8 +10,7 @@
  * @since Twenty Thirteen 1.0
  */
 ?>
-</div><!-- ! splash -->
-	</div><!-- ! content_container -->	
+
 		</div><!-- #main -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<?php get_sidebar( 'main' ); ?>
@@ -24,6 +23,7 @@
 	
 
 	<?php wp_footer(); ?>
+	
 	</div><!-- ! splash -->
 	</div><!-- ! content_container -->
 	</div><!-- ! wrapper -->
