@@ -189,12 +189,15 @@ img.wp-smiley,.rsswidget img{border:0;border-radius:0;box-shadow:none;margin-bot
 .site-main{position:relative;}
 .site-main .sidebar-container{height:0;position:relative;top:40px;width:100%;z-index:1;}
 .site-main .sidebar-inner{margin:0 auto;max-width:1280px;}
-.wrapper{position:relative;display:block;float:none;clear:both;margin:0 auto;width:100%;height:100%;background-image:url(http://images.rockinguitarlessons.com/bg-1.png);background-repeat:repeat-y;}
-.content_container{position:relative;display:block;float:none;overflow:hidden;margin:0 auto;max-width:1280px;width:100%;height:100%;border-right:1px solid #000;border-left:1px solid #000;background-image:url(http://images.rockinguitarlessons.com/mocha_grunge.png);background-repeat:repeat;}
-.splash{position:relative;display:block;float:none;overflow:hidden;margin-left:0;padding-top:1.2em;padding-top:18px;max-width:1280px;width:100%;height:100%;background-color:transparent;background-image:url(http://images.rockinguitarlessons.com/red_texture_lit.png);background-position:center top;background-repeat:no-repeat;}
-#uber{position:relative;float:none;margin-top:-1.2em;margin-top:-18px;margin-right:auto;margin-left:auto;}
-.logo{position:relative;float:none;margin:0 auto;max-width:390px;width:100%;height:140px;text-align:center;}
-.shadow{position:relative;display:block;float:none;overflow:hidden;margin:0;max-width:1600px;width:100%;height:auto;}
+.splash-content{max-width:724px;height:auto;}
+.wrapper{position:relative;display:block;float:none;clear:both;margin:0 auto;width:100%;height:100%;background-image:url(http://images.rockinguitarlessons.com/grunge-pattern.png);background-repeat:repeat;}
+.killer-header{position:relative;display:block;float:none;margin:0 auto;max-width:1920px;width:100%;height:auto;border-right:1px groove rgba(0, 0, 0, 0.7);border-left:1px groove rgba(0, 0, 0, 0.7);background-color:transparent;}
+.body-wrap{position:relative;display:block;float:none;margin:0 auto;max-width:1280px;width:100%;height:100%;border-right:2px ridge rgba(0, 0, 0, 0.1);border-left:2px ridge rgba(0, 0, 0, 0.1);background-color:transparent;}
+.texture-splash{position:relative;display:block;float:none;overflow:hidden;margin-left:0;padding-top:1.2em;padding-top:18px;max-width:1920px;width:100%;height:768px;background-color:transparent;background-image:url(http://images.rockinguitarlessons.com/header-wrap-1920.png);background-position:center top;background-repeat:no-repeat;}
+#uber-menu{position:relative;float:right;padding-top:1.5em;padding-top:24px;padding-right:.5em;padding-right:8px;display:inline-block;width:100%;max-width:1330px;height:auto;margin-left:1.25em;margin-left:20px;}
+.logo-box{position:relative;float:left;margin:0 auto;max-width:590px;width:100%;height:140px;display:inline-block;}
+.logo{position:relative;float:right;width:390px;height:140px;text-align:center;margin:0 auto;}
+.shadow{position:relative;clear:both;display:block;float:none;margin:0 auto;width:1920px;height:25px;overflow:hidden;}
 .site-header{position:relative;text-align:center;margin:0 auto;float:none;}
 .site-header .home-link{color:#141412;display:block;margin:0 auto;max-width:1280px;min-height:180px;padding:0;text-decoration:none;width:100%;}
 .site-header .site-title:hover{text-decoration:underline;}
@@ -219,6 +222,9 @@ ul.nav-menu li:hover>ul,.nav-menu ul li:hover>ul{display:block;}
 .hentry{padding:40px 0;word-wrap:break-word;}
 .entry-header,.entry-content,.entry-summary,.entry-meta{margin:0 auto;max-width:1040px;width:100%;}
 .sidebar .entry-header,.sidebar .entry-content,.sidebar .entry-summary,.sidebar .entry-meta{max-width:1040px;padding:0 376px 0 60px;}
+.post-to-page-categories,.post-to-page-title,.post-to-page-date,.post-to-page-author,.post-to-page-readmore,.post-to-page-separator{color:#ffb61f;font-weight:400;}
+.post-to-page-content{color:black;}
+.splash-content{height:auto;margin:0 auto;float:none;display:block;z-index:1;width:100%;max-width:1280px;padding:10px 10px 20px 30px;}
 .sidebar .entry-header .entry-meta{padding:0;}
 .entry-thumbnail img{display:block;margin:0 auto 10px;}
 .entry-header{margin-bottom:30px;}
@@ -278,13 +284,13 @@ footer.entry-meta{margin-top:24px;}
 .entry-media{margin:0 auto 24px;max-width:724px;width:100%;}
 .sidebar .entry-media{max-width:1040px;padding:0 316px 0 0;}
 .entry-media .wp-caption,.entry-media .wp-caption-text,.entry-media [class*="align"]{margin:0 auto;}
-.format-aside{background-color:#f7f5e7;}
+.format-aside{background-color:transparent;}
 .blog .format-aside:first-of-type,.single .format-aside:first-of-type,.format-aside+.format-aside,.format-aside+.format-link,.format-link+.format-aside{box-shadow:inset 0 2px 2px rgba(173, 165, 105, 0.2);}
 .format-aside .entry-meta{margin-top:0;}
 .format-aside blockquote{font-size:100%;font-weight:normal;}
 .format-aside cite{font-size:100%;text-transform:none;}
 .format-aside cite:before{content:"\2014";margin-right:5px;}
-.format-audio{background-color:#db572f;}
+.format-audio{background-color:transparent;}
 .format-audio .entry-title{font-size:28px;font-weight:bold;}
 .format-audio .entry-media{max-width:604px;}
 .sidebar .format-audio .entry-media{max-width:1040px;padding:0 374px 0 60px;}
@@ -293,7 +299,7 @@ footer.entry-meta{margin-top:24px;}
 .format-audio .audio-content{background:url(images/dotted-line.png) repeat-y left top;background-size:4px 4px;float:right;padding-left:35px;width:80%;width:-webkit-calc(15%);width:calc(15%);}
 .format-audio .wp-audio-shortcode{height:30px !important;margin:20px 0;max-width:400px !important;}
 .format-audio audio{max-width:100% !important;}
-.format-chat{background-color:#eadaa6;}
+.format-chat{background-color:transparent;}
 .format-chat .entry-title{font-size:28px;font-weight:bold;}
 .format-chat .entry-meta a,.format-chat .entry-content a{color:#722d19;}
 .format-chat .entry-meta .date a:before{content:"\f108";margin-right:2px;}
@@ -320,10 +326,10 @@ footer.entry-meta{margin-top:24px;}
 .format-link{background-color:#f7f5e7;}
 .blog .format-link:first-of-type,.single .format-link:first-of-type{box-shadow:inset 0 2px 2px rgba(173, 165, 105, 0.2);}
 .format-link .entry-header,.format-link .entry-content p:last-child{margin-bottom:0;}
-.format-link .entry-title{color:#ca3c08;display:inline;font:300 italic 20px "proxima-nova",Helvetica,sans-serif;margin-right:20px;}
+.format-link .entry-title{color:#ca3c08;display:inline;font:400 italic 20px "proxima-nova",Helvetica,sans-serif;margin-right:20px;}
 .format-link .entry-title a{color:#bc360a;}
 .format-link div.entry-meta{display:inline;}
-.format-quote{background-color:#210d10;}
+.format-quote{background-color:transparent;}
 .format-quote .entry-content,.format-quote .entry-meta{color:#f7f5e7;}
 .format-quote .entry-content blockquote{font-size:28px;margin:0;}
 .format-quote .entry-content a,.format-quote .entry-meta a,.format-quote .linked{color:#e63f2a;}
@@ -333,7 +339,7 @@ footer.entry-meta{margin-top:24px;}
 .format-quote .quote{font-style:italic;font-weight:300;padding-left:75px;position:relative;}
 .format-quote .quote:before{content:'\201C';font-size:140px;font-weight:400;line-height:.8;padding-right:25px;position:absolute;left:-15px;top:-3px;}
 .format-quote .entry-meta .author{display:none;}
-.format-status{background-color:#722d19;padding:0;}
+.format-status{background-color:transparent;padding:0;}
 .format-status .entry-content,.format-status .entry-meta{padding-left:35px;position:relative;}
 .format-status .entry-content a{color:#eadaa6;}
 .format-status .entry-meta a{color:#f7f5e7;}
@@ -342,16 +348,16 @@ footer.entry-meta{margin-top:24px;}
 .sidebar .format-status .entry-content:before,.sidebar .format-status .entry-meta:before{left:70px;}
 .format-status .categories-links,.format-status .tags-links{display:none;}
 .format-status .entry-meta:before{background-position:left top;}
-.format-status .entry-content{color:#f7f5e7;font-size:24px;font-style:italic;font-weight:300;padding-bottom:30px;padding-top:40px;position:relative;}
+.format-status .entry-content{color:#f7f5e7;font-size:24px;font-style:italic;font-weight:400;padding-bottom:30px;padding-top:40px;position:relative;}
 .format-status .entry-content p:first-child:before{background-color:rgba(0, 0, 0, 0.65);content:"";height:3px;margin-top:13px;position:absolute;left:4px;width:13px;}
 .sidebar .format-status .entry-content p:first-child:before{left:64px;}
 .format-status .entry-content p:last-child{margin-bottom:0;}
 .format-status .entry-meta{margin-top:0;padding-bottom:40px;}
 .format-status .entry-meta .date a:before{content:"\f105";}
-.format-video{background-color:#db572f;}
-.format-video .entry-content a,.format-video .entry-meta a,.format-video .entry-content a:hover,.format-video .entry-meta a:hover{color:#fbfaf3;}
+.format-video{background-color:transparent;}
+.format-video .entry-content a,.format-video .entry-meta a,.format-video .entry-content a:hover,.format-video .entry-meta a:hover{color:#350505;}
 .format-video .entry-title{font-size:50px;font-weight:400;}
-.format-video .entry-meta{color:#220e10;}
+.format-video .entry-meta{color:#350505;}
 .attachment .hentry{background-color:#e8e5ce;margin:0;padding:0;}
 .attachment .entry-header{margin-bottom:0;max-width:1040px;padding:30px 0;}
 .attachment .entry-title{display:inline-block;float:left;font:300 italic 30px "proxima-nova",Helvetica,sans-serif;margin:0;}

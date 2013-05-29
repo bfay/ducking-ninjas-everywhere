@@ -11,7 +11,7 @@
  */
 ?>
 
-		</div><!-- #main -->
+		</div><!-- ! body-wrapper -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<?php get_sidebar( 'main' ); ?>
 
@@ -24,8 +24,8 @@
 
 	<?php wp_footer(); ?>
 	
-	</div><!-- ! splash -->
-	</div><!-- ! content_container -->
+	
+	
 	</div><!-- ! wrapper -->
 </body>
 </html>

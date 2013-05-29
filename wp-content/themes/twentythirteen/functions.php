@@ -561,3 +561,63 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+
+
+
+
+
+/**************************/
+/* Include LayerSlider WP */
+/**************************/
+ 
+// Path for LayerSlider WP main PHP file
+$layerslider = get_stylesheet_directory() . '/plugins/LayerSlider/layerslider.php';
+ 
+// Check if the file is available to prevent warnings
+if(file_exists($layerslider)) {
+ 
+    // Include the file
+    include $layerslider;
+ 
+    // Activate the plugin if necessary
+    if(get_option('twentythirteen_layerslider_activated', '0') == '0') {
+ 
+        // Run activation script
+        layerslider_activation_scripts();
+ 
+        // Save a flag that it is activated, so this won't run again
+        update_option('twentythirteen_layerslider_activated', '1');
+    }
+}
+
+/********************************************************/
+/*                        Actions                       */
+/********************************************************/
+ 
+    $GLOBALS['lsPluginVersion'] = '4.5.5';
+    $GLOBALS['lsPluginPath'] = get_stylesheet_directory_uri() . '/plugins/LayerSlider/';
+    $GLOBALS['lsAutoUpdateBox'] = false;
+    $GLOBALS['lsRepoAPI'] = 'http://repo.kreatura.hu/';
+    $GLOBALS['lsPluginSlug'] = basename(dirname(__FILE__));
+ 
+    // Activation hook for creating the initial DB table
+    register_activation_hook(__FILE__, 'layerslider_activation_scripts');
+    
+        // Get WPDB Object
+    global $wpdb;
+ 
+    // Table name
+    $table_name = $wpdb->prefix . "layerslider";
+ 
+    // Get sliders
+    $sliders = $wpdb->get_results( "SELECT * FROM $table_name
+                                        WHERE flag_hidden = '0' AND flag_deleted = '0'
+                                        ORDER BY date_c ASC LIMIT 100" );
+ 
+    // Iterate over the sliders
+    foreach($sliders as $key => $item) {
+ 
+        echo '<option value="'.$item->id.'">'.$item->name.'</option>';
+    }
+

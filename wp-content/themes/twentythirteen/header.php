@@ -51,32 +51,23 @@
 
 <body <?php body_class(); ?>>
 <div class="wrapper">
-	<div class="content_container">
-	<div class="splash">
-		<header class="site-header" role="banner">
-		<div class="row">
-			<div class="eleven columns push-one">
-			<div class="logo">
-			<a href="index.php"><img src="http://images.rockinguitarlessons.com/logo.png" alt="Rockin Guitar Lessons Logo"/></a>
+	<div class="texture-splash">
+		<header class="killer-header row" role="banner">
+		
+			<div class="four columns logo-box">
+			<a href="index.php"><img class="logo" src="http://images.rockinguitarlessons.com/logo.png" alt="Rockin Guitar Lessons Logo"/></a>
 			</div>
-			</div>
-			 </div><!-- ! end row -->
 			
-			<div id="uber" class="row">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+			<nav id="uber-menu" class="eight columns alignright">
+				
 					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
 					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-					<?php get_search_form(); ?></div>
-		
 				</nav><!-- #site-navigation -->
-			</div><!-- #uber -->
-		
-		</header><!-- #masthead -->
+			
+		</header>
 		<div class="row">
-		<div class="full">
-		<img class="shadow" src="http://images.rockinguitarlessons.com/shadow_full.png"/> 		
+		<div class="full shadow">
+		<img src="http://images.rockinguitarlessons.com/header-shadow.png"/>
+		</div> 
 		</div>
-		</div>	
-
-		<div id="main" class="site-main">
