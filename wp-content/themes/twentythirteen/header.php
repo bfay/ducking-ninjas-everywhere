@@ -54,15 +54,15 @@
 	<div class="texture-splash">
 		<header class="killer-header row" role="banner">
 		
-			<div class="four columns logo-box">
-			<a href="index.php"><img class="logo" src="http://images.rockinguitarlessons.com/logo.png" alt="Rockin Guitar Lessons Logo"/></a>
+			<div class="four columns logo">
+			<a href="index.php"><img src="http://images.rockinguitarlessons.com/logo.png" alt="Rockin Guitar Lessons Logo"/></a>
 			</div>
 			
 			<nav id="uber-menu" class="eight columns alignright">
 				
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
-					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+					<!-- ! replaced by uber menu <h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
+					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>-->
+<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 			
 		</header>

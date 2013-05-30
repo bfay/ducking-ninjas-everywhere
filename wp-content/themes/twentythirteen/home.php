@@ -15,7 +15,19 @@ get_header(); ?>
 		</div>
 		</div>	clean this up-->	
 <div class="site-content">
-		<?php echo do_shortcode("[posts-to-page cat_ID=13 ] "); ?>
+		<?php if ( have_posts() ) : ?>
+
+
+			<?php /* The loop */ ?>
+				<?php query_posts('category_name=featured'); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
+
+			<?php twentythirteen_paging_nav(); ?>
+				<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
 </div>
 </div>
 
@@ -25,9 +37,11 @@ get_header(); ?>
 
 <div class="body-wrap">	
 		<div id="content" class="site-content" role="main">
+	
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
+				<?php query_posts('category_name=rock'); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
@@ -35,6 +49,19 @@ get_header(); ?>
 			<?php twentythirteen_paging_nav(); ?>
 
 		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
+		
+		
+			<?php if ( have_posts() ) : ?>
+			<?php /* The loop */ ?>
+				<?php query_posts('category_name=featured'); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
+
+			<?php twentythirteen_paging_nav(); ?>
+				<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 

@@ -1,0 +1,6 @@
+/*** General WP Admin Styles  ***/
+
+#adminmenu .toplevel_page_catalyst .wp-menu-image img {
+	height: 16px;
+	width: 16px;
+}
